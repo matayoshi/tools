@@ -1,4 +1,4 @@
-// Title:  sleep
+ï»¿// Title:  sleep
 // Name:   sleep.c
 // Author: Matayoshi
 // Date:   2010/06/20
@@ -9,7 +9,7 @@
 #include <windows.h>
 
 int main(int argc, char* argv[]) {
-	// ˆø”ƒ`ƒFƒbƒN
+	// å¼•æ•°ãƒã‚§ãƒƒã‚¯
 	if(argc < 2) {
 		fprintf(stdout, "Usage: %s msec\n", argv[0]);
 		exit(1);
@@ -17,14 +17,14 @@ int main(int argc, char* argv[]) {
 		char buf[16];
 		int wait = 0;
 
-		// •¶š—ñ‚©‚ç”’l‚É•ÏŠ·
+		// æ–‡å­—åˆ—ã‹ã‚‰æ•°å€¤ã«å¤‰æ›
 		sscanf(argv[1], "%15c", buf);
 		if(sscanf(buf, "%d", &wait) != 1) {
 			fprintf(stdout, "Usage: %s msec\n", argv[0]);
 			exit(1);
 		}
 
-		// ˆø”‚Åw’è‚³‚ê‚½ msec ‚¾‚¯ sleep(wait)
+		// å¼•æ•°ã§æŒ‡å®šã•ã‚ŒãŸ msec ã ã‘ sleep(wait)
 		Sleep(wait);
 	}
 	return 0;
